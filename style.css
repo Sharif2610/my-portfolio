@@ -1,4 +1,4 @@
-/* --- Reset Styles --- */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* --- Body Styling --- */
+
 body {
   background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
   color: #00d4ff;
@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 
-/* --- Navbar --- */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -64,7 +64,6 @@ body {
   width: 100%;
 }
 
-/* --- Section Styling --- */
 
 .section {
   opacity: 0;
@@ -101,7 +100,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- Home Section --- */
 #home-section {
   display: flex;
   flex-direction: column;
@@ -123,7 +121,6 @@ body {
   max-width: 600px;
 }
 
-/* --- Education Section --- */
 .education-box {
   display: flex;
   flex-direction: column;
@@ -145,8 +142,6 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* --- Skills Section --- */
-/* --- Skills Section --- */
 #skills-section {
   background: radial-gradient(circle at center, #1a1a2e 0%, #0f2027 80%);
   display: flex;
@@ -222,7 +217,6 @@ body {
 }
 
 
-/* --- Projects Section --- */
 .projects-box {
   text-align: center;
 }
@@ -241,7 +235,6 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* --- Contact Section --- */
 .contact-card {
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
@@ -286,3 +279,4 @@ body {
   transform: translateY(-3px);
   background: #00bcd4;
 }
+
