@@ -1,4 +1,4 @@
-
+/* --- Reset Styles --- */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-
+/* --- Body Styling --- */
 body {
   background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
   color: #00d4ff;
@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 
-
+/* --- Navbar --- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -64,14 +64,14 @@ body {
   width: 100%;
 }
 
-
+/* --- Section Styling --- */
 .section {
   opacity: 0;
   transition: opacity 0.6s ease;
   position: absolute;
-  top: 100px; /* Push down below navbar */
+  top: 100px;
   left: 0;
-  height: calc(100vh - 100px); /* Adjust height so it fits the screen */
+  height: calc(100vh - 100px);
   width: 100%;
   display: none;
   padding: 0 10%;
@@ -89,8 +89,6 @@ body {
   z-index: 1;
 }
 
-
-
 .section.active {
   display: block;
 }
@@ -100,6 +98,7 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* --- Home Section --- */
 #home-section {
   display: flex;
   flex-direction: column;
@@ -107,7 +106,6 @@ body {
   align-items: center;
   text-align: center;
 }
-
 
 #home-section h1 {
   font-size: 3rem;
@@ -121,6 +119,7 @@ body {
   max-width: 600px;
 }
 
+/* --- Education Section --- */
 .education-box {
   display: flex;
   flex-direction: column;
@@ -142,6 +141,7 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* --- Skills Section --- */
 #skills-section {
   background: radial-gradient(circle at center, #1a1a2e 0%, #0f2027 80%);
   display: flex;
@@ -205,7 +205,6 @@ body {
 .skill5 { bottom: 20%; left: 0%; transform: translateY(0); }
 .skill6 { top: 20%; left: 0%; transform: translateY(0); }
 
-/* Optional: subtle rotating glow animation */
 @keyframes glow {
   0% { box-shadow: 0 0 10px #00d4ff, 0 0 20px #ff00cc; }
   50% { box-shadow: 0 0 20px #00d4ff, 0 0 40px #ff00cc; }
@@ -216,7 +215,7 @@ body {
   animation: glow 3s infinite ease-in-out;
 }
 
-
+/* --- Projects Section --- */
 .projects-box {
   text-align: center;
 }
@@ -235,6 +234,7 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* --- Contact Section --- */
 .contact-card {
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
@@ -280,3 +280,57 @@ body {
   background: #00bcd4;
 }
 
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  body {
+    padding-top: 120px;
+  }
+
+  .section {
+    position: relative;
+    top: 0;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  #home-section h1 {
+    font-size: 2rem;
+  }
+
+  #home-section p {
+    font-size: 1rem;
+  }
+
+  .project-card,
+  .education-item,
+  .contact-card {
+    max-width: 90%;
+  }
+
+  .circle-tree {
+    width: 250px;
+    height: 250px;
+  }
+}
